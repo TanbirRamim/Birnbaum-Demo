@@ -2,9 +2,6 @@
 
 Developed by **TanbirRamim**
 
-## Project info
-
-**URL**: https://lovable.dev/projects/bcad1cc9-0698-4133-9091-4e86000cc5f7
 
 ## How can I edit this code?
 
