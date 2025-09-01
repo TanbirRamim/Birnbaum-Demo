@@ -1,9 +1,13 @@
 backend:
   name: git-gateway
   branch: main
+  repo: "your-username/your-repo-name" # You'll need to update this
 
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
+
+# Enable Netlify Identity
+publish_mode: editorial_workflow
 
 collections:
   - name: "pages"

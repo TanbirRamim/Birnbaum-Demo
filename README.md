@@ -1,4 +1,6 @@
-# Welcome to your Lovable project
+# Gasthof Ritter St. Georg - Hotel & Restaurant Website
+
+Developed by **TanbirRamim**
 
 ## Project info
 
@@ -8,15 +10,13 @@
 
 There are several ways of editing your application.
 
-**Use Lovable**
+**Use TanbirRamim Development**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/bcad1cc9-0698-4133-9091-4e86000cc5f7) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
+This project is maintained and developed by TanbirRamim.
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -62,12 +62,10 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/bcad1cc9-0698-4133-9091-4e86000cc5f7) and click on Share -> Publish.
+Deploy using your preferred hosting service.
 
-## Can I connect a custom domain to my Lovable project?
+## Contributing
 
-Yes, you can!
+Developed by **TanbirRamim**
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+For any questions or support, please contact the development team.
