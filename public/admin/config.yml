@@ -1,0 +1,87 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "Homepage"
+        file: "content/pages/home.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
+          - { label: "Hero Image", name: "hero_image", widget: "image" }
+
+  - name: "rooms"
+    label: "Rooms"
+    folder: "content/rooms"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Room Name", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Price per Night", name: "price", widget: "number" }
+      - { label: "Max Guests", name: "max_guests", widget: "number" }
+      - { label: "Room Image", name: "image", widget: "image" }
+      - { label: "Features", name: "features", widget: "list" }
+      - { label: "Available", name: "availability", widget: "boolean", default: true }
+
+  - name: "menu"
+    label: "Restaurant Menu"
+    folder: "content/menu"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Dish Name", name: "title", widget: "string" }
+      - { label: "Category", name: "category", widget: "select", options: ["Appetizers", "Main Courses", "Desserts", "Beverages", "Specials"] }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Price", name: "price", widget: "number", value_type: "float" }
+      - { label: "Available", name: "availability", widget: "boolean", default: true }
+      - { label: "Vegetarian", name: "vegetarian", widget: "boolean", default: false }
+      - { label: "Vegan", name: "vegan", widget: "boolean", default: false }
+
+  - name: "events"
+    label: "Events"
+    folder: "content/events"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Event Title", name: "title", widget: "string" }
+      - { label: "Event Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Event Image", name: "image", widget: "image", required: false }
+      - { label: "Location", name: "location", widget: "string", default: "Gasthof Ritter St. Georg" }
+      - { label: "Price", name: "price", widget: "number", required: false }
+      - { label: "Max Attendees", name: "max_attendees", widget: "number", required: false }
+
+  - name: "offers"
+    label: "Special Offers"
+    folder: "content/offers"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Offer Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Discount Percentage", name: "discount", widget: "number" }
+      - { label: "Valid From", name: "valid_from", widget: "datetime" }
+      - { label: "Valid Until", name: "valid_until", widget: "datetime" }
+      - { label: "Offer Image", name: "image", widget: "image", required: false }
+      - { label: "Terms & Conditions", name: "terms", widget: "text", required: false }
+
+  - name: "gallery"
+    label: "Gallery"
+    folder: "content/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Image Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Caption", name: "caption", widget: "text", required: false }
+      - { label: "Category", name: "category", widget: "select", options: ["hotel", "restaurant", "events", "exterior", "interior"] }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }

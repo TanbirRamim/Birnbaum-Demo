@@ -1,0 +1,166 @@
+/* Using system fonts for GDPR compliance */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hotel & Restaurant Design System - Gasthof Ritter St. Georg */
+
+@layer base {
+  :root {
+    /* Color Palette - Elegant Hotel Theme */
+    --background: 32 20% 97%;
+    --foreground: 155 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 155 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 155 25% 15%;
+
+    /* Forest Green Primary */
+    --primary: 155 40% 25%;
+    --primary-foreground: 32 20% 97%;
+    --primary-light: 155 35% 35%;
+    --primary-dark: 155 50% 20%;
+
+    /* Warm Gold Secondary */
+    --secondary: 35 65% 88%;
+    --secondary-foreground: 155 25% 15%;
+    --gold: 42 85% 55%;
+    --gold-light: 42 70% 70%;
+
+    /* Neutral Warm Grays */
+    --muted: 32 15% 93%;
+    --muted-foreground: 155 15% 45%;
+    --neutral-light: 30 10% 90%;
+    --neutral-dark: 155 20% 25%;
+
+    --accent: 42 85% 55%;
+    --accent-foreground: 155 25% 15%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 32 20% 97%;
+
+    --border: 32 15% 88%;
+    --input: 32 15% 95%;
+    --ring: 155 40% 25%;
+
+    --radius: 0.75rem;
+
+    /* Design System Variables */
+    --gradient-primary: linear-gradient(135deg, hsl(155, 40%, 25%), hsl(155, 50%, 20%));
+    --gradient-gold: linear-gradient(135deg, hsl(42, 85%, 55%), hsl(42, 70%, 70%));
+    --gradient-elegant: linear-gradient(180deg, hsl(32, 20%, 97%), hsl(32, 15%, 93%));
+    --shadow-elegant: 0 8px 32px -8px hsl(155, 40%, 25% / 0.15);
+    --shadow-card: 0 4px 24px -4px hsl(155, 25%, 15% / 0.08);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Typography Scale - System fonts for GDPR compliance */
+    --font-display: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-body: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark theme with warm tones */
+    --background: 155 25% 8%;
+    --foreground: 32 20% 95%;
+
+    --card: 155 20% 12%;
+    --card-foreground: 32 20% 95%;
+
+    --popover: 155 20% 12%;
+    --popover-foreground: 32 20% 95%;
+
+    --primary: 42 85% 55%;
+    --primary-foreground: 155 25% 8%;
+    --primary-light: 42 70% 65%;
+    --primary-dark: 42 90% 45%;
+
+    --secondary: 155 25% 15%;
+    --secondary-foreground: 32 20% 95%;
+    --gold: 42 85% 55%;
+    --gold-light: 42 70% 70%;
+
+    --muted: 155 20% 15%;
+    --muted-foreground: 32 15% 70%;
+    --neutral-light: 155 15% 20%;
+    --neutral-dark: 32 10% 85%;
+
+    --accent: 42 85% 55%;
+    --accent-foreground: 155 25% 8%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 32 20% 95%;
+
+    --border: 155 20% 18%;
+    --input: 155 20% 15%;
+    --ring: 42 85% 55%;
+
+    --sidebar-background: 155 25% 10%;
+    --sidebar-foreground: 32 20% 90%;
+    --sidebar-primary: 42 85% 55%;
+    --sidebar-primary-foreground: 155 25% 8%;
+    --sidebar-accent: 155 20% 15%;
+    --sidebar-accent-foreground: 32 20% 90%;
+    --sidebar-border: 155 20% 18%;
+    --sidebar-ring: 42 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 500;
+  }
+
+  /* Custom Utilities */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .gradient-elegant {
+    background: var(--gradient-elegant);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}
