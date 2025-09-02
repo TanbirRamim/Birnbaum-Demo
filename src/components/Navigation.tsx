@@ -58,8 +58,8 @@ const Navigation = () => {
               <Phone className="w-4 h-4" />
               <span>+49 123 456 789</span>
             </div>
-            <Button variant="booking" size="default">
-              Book Now
+            <Button variant="booking" size="default" asChild>
+              <Link to="/booking">Book Now</Link>
             </Button>
           </div>
 
@@ -100,8 +100,8 @@ const Navigation = () => {
                   <Phone className="w-4 h-4" />
                   <span>+49 123 456 789</span>
                 </div>
-                <Button variant="booking" size="default" className="w-full">
-                  Book Now
+                <Button variant="booking" size="default" className="w-full" asChild>
+                  <Link to="/booking">Book Now</Link>
                 </Button>
               </div>
             </nav>

@@ -10,6 +10,7 @@ import Restaurant from "./pages/Restaurant";
 import Events from "./pages/Events";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
+import Booking from "./pages/Booking";
 import Privacy from "./pages/Privacy";
 import Imprint from "./pages/Imprint";
 import NotFound from "./pages/NotFound";
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="/events" element={<Events />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/booking" element={<Booking />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/imprint" element={<Imprint />} />
             <Route path="*" element={<NotFound />} />

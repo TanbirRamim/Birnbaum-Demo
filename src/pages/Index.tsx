@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Star, MapPin, Calendar, Users, Wifi, Car, Utensils, Coffee } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import heroImage from '@/assets/hero-hotel.jpg';
 import hotelRoom from '@/assets/hotel-room.jpg';
 import restaurantDining from '@/assets/restaurant-dining.jpg';
@@ -59,11 +60,11 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="gold" size="hero">
-              Book Your Stay
+            <Button variant="gold" size="hero" asChild>
+              <Link to="/booking">Book Your Stay</Link>
             </Button>
-            <Button variant="outline" size="hero" className="border-white text-white hover:bg-white hover:text-primary-dark">
-              View Rooms
+            <Button variant="outline" size="hero" className="border-white text-white hover:bg-white hover:text-primary-dark" asChild>
+              <Link to="/rooms">View Rooms</Link>
             </Button>
           </div>
 
@@ -153,8 +154,8 @@ const Index = () => {
                       </Badge>
                     ))}
                   </div>
-                  <Button variant="elegant" className="w-full">
-                    View Details
+                  <Button variant="elegant" className="w-full" asChild>
+                    <Link to="/rooms">View Details</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -162,8 +163,8 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button variant="booking" size="lg">
-              View All Rooms
+            <Button variant="booking" size="lg" asChild>
+              <Link to="/rooms">View All Rooms</Link>
             </Button>
           </div>
         </div>
@@ -202,11 +203,11 @@ const Index = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="booking" size="lg">
-                  View Menu
+                <Button variant="booking" size="lg" asChild>
+                  <Link to="/restaurant">View Menu</Link>
                 </Button>
-                <Button variant="outline" size="lg">
-                  Reserve Table
+                <Button variant="outline" size="lg" asChild>
+                  <Link to="/booking">Reserve Table</Link>
                 </Button>
               </div>
             </div>
